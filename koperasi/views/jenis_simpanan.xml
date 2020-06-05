@@ -1,0 +1,20 @@
+<odoo>
+	<record id="action_jenis_simpanan_list" model="ir.actions.act_window">
+        <field name="name">Jenis Simpanan</field>
+        <field name="res_model">koperasi.jenis.simpanan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click Untuk Menambah Jenis Simpanan
+            </p>
+            <p>Klick tombol create untuk bikin Jenis Simpanan baru</p>
+    	</field>
+    </record>
+
+	<menuitem id="jenis_simpanan"
+        name="Jenis Simpanan"
+        parent="pengaturan_simpanan"
+        sequence="10"
+        action="action_jenis_simpanan_list"
+    />
+</odoo>

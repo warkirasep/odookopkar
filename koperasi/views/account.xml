@@ -1,0 +1,20 @@
+<odoo>
+	<record id="action_account_list" model="ir.actions.act_window">
+        <field name="name">Account</field>
+        <field name="res_model">account.account</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click To Add Account
+            </p>
+            <p>Klick tombol create untuk bikin Account baru</p>
+        </field>
+    </record>
+
+	<menuitem id="koperasi_account"
+        name="Account"
+        parent="master_data"
+        sequence="5"
+        action="action_account_list"
+    />
+</odoo>

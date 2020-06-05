@@ -1,0 +1,21 @@
+<odoo>
+	<!--Action Karyawan-->
+    <record id="action_department_list" model="ir.actions.act_window">
+        <field name="name">Department</field>
+        <field name="res_model">hr.department</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click To Add Department
+            </p>
+            <p>Klick tombol create untuk bikin Department baru</p>
+        </field>
+    </record>
+
+	<menuitem id="koperasi_department"
+        name="Department"
+        parent="master_data"
+        sequence="10"
+        action="action_department_list"
+    />
+</odoo>

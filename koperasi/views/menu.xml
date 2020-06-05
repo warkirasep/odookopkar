@@ -1,0 +1,220 @@
+<odoo>
+    <record id="action_anggota_list" model="ir.actions.act_window">
+        <field name="name">Anggota</field>
+        <field name="res_model">koperasi.anggota</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click To Add Course
+            </p>
+            <p>Klick tombol create untuk bikin course baru</p>
+        </field>
+    </record>
+    <record id="action_calon_anggota_list" model="ir.actions.act_window">
+        <field name="name">Calong Anggota</field>
+        <field name="res_model">koperasi.calon.anggota</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Action Member List -->
+    <record id="action_member_list" model="ir.actions.act_window">
+        <field name="name">Member</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{"search_default_member": 1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click To Add Member
+            </p>
+            <p>Klick tombol create untuk bikin member baru</p>
+        </field>
+    </record>
+    <!--Action Karyawan-->
+    <record id="action_employee_list" model="ir.actions.act_window">
+        <field name="name">Karyawan</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click To Add Employee
+            </p>
+            <p>Klick tombol create untuk bikin Karyawan baru</p>
+        </field>
+    </record>
+
+    <menuitem id="koperasi_root"
+        name="Koperasi"
+        sequence="20"
+    />
+    <!--- Menu Parent -->
+    <menuitem id="configuration"
+        name="Pengaturan"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="master_data"
+        name="Master Data"
+        parent="configuration"
+        sequence="20"
+    />
+    <menuitem id="pengaturan_simpanan"
+        name="Pengaturan Simpanan"
+        parent="configuration"
+        sequence="20"
+    />
+    <menuitem id="pengaturan_pinjaman"
+        name="Pengaturan Pinjaman"
+        parent="configuration"
+        sequence="20"
+    />
+    <!-- End Parent Configuration -->
+
+    <menuitem id="simpanan"
+        name="Simpanan"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="pinjaman"
+        name="Pinjaman"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="unit_usaha"
+        name="Unit Usaha"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="laporan"
+        name="Laporan"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="statistik"
+        name="Statistik"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="statistik"
+        name="Panduan"
+        parent="koperasi_root"
+        sequence="20"
+        action="action_anggota_list"
+    />
+
+    <!-- Sub Menu Configuration Master Data -->
+    <menuitem id="koperasi_anggota"
+        name="Anggota"
+        parent="master_data"
+        sequence="20"
+        action="action_member_list"
+    />
+    <menuitem id="koperasi_karyawan"
+        name="Karyawan"
+        parent="master_data"
+        sequence="20"
+        action="action_employee_list"
+    />
+
+    <!-- Sub Menu Configuration Jenis Pinjaman -->
+    <menuitem id="jenis_pinjaman"
+        name="Jenis Pinjaman"
+        parent="pengaturan_pinjaman"
+        sequence="20"
+        action="action_calon_anggota_list"
+    />
+
+    <!-- Sub Menu Laporant -->
+    <menuitem id="neraca"
+        name="Naraca"
+        parent="laporan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="perhitungan_hasil_usaha"
+        name="Perhitungan Hasil Usaha"
+        parent="laporan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="sisa_hasil_usaha"
+        name="Sisa Hasil Usaha"
+        parent="laporan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="arus_kas"
+        name="Arus Kas"
+        parent="laporan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="ekuitas"
+        name="Perubahan Ekuitas"
+        parent="laporan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="laporan_harian"
+        name="Laporan Harian"
+        parent="laporan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+
+    <!-- Sub Menu Simpanan -->
+    <menuitem id="data_simpanan"
+        name="Data Simpanan"
+        parent="simpanan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="tunggakan_simpanan"
+        name="Tunggakan Simpanan Wajib"
+        parent="simpanan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="tagihan"
+        name="Tagihan"
+        parent="simpanan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="penarikan"
+        name="Permohonan Penarikan"
+        parent="simpanan"
+        sequence="20"
+        action="action_anggota_list"
+    />
+
+    <!-- Submenu Pinjaman -->
+    <menuitem id="data_pinjaman"
+        name="Data Pinjaman"
+        parent="pinjaman"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="angsuran_pinjaman"
+        name="Angsuran Pinjaman"
+        parent="pinjaman"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="permohonan_baru_pinjaman"
+        name="Permohonan Baru"
+        parent="pinjaman"
+        sequence="20"
+        action="action_anggota_list"
+    />
+    <menuitem id="pinjaman_jatuh_tempo"
+        name="Jatuh Tempo"
+        parent="pinjaman"
+        sequence="20"
+        action="action_anggota_list"
+    />
+</odoo>

@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="view_member_form" model="ir.ui.view">
+            <field name="name">view_member_form</field>
+            <field name="model">res.partner</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="is_member" />
+                </field>
+                <field name="is_member" position="after">
+                    <field name="is_active" />
+                </field>
+                <field name="type" position="before">
+                    <field name="code" />
+                </field>
+            </field>
+        </record>
+        <!-- Filter Member -->
+        <record id="view_member_filter" model="ir.ui.view">
+            <field name="name">view_member_filter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter" />
+        </record>
+
+        <!--Tree Member-->
+        <record id="view_member_tree" model="ir.ui.view">
+            <field name="name">view_member_tree</field>
+            <field name="model">res.partner</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+                <field name="display_name" position="before">
+                    <field name="code" />
+                </field>
+                <field name="email" position="after">
+                    <field name="is_active" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
