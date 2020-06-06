@@ -12,8 +12,8 @@
                 <field name="is_member" position="after">
                     <field name="is_active" />
                 </field>
-                <field name="type" position="before">
-                    <field name="code" />
+                <field name="category_id" position="attributes">
+                    <attribute name="required">True</attribute>
                 </field>
             </field>
         </record>
@@ -31,9 +31,6 @@
             <field name="type">tree</field>
             <field name="inherit_id" ref="base.view_partner_tree" />
             <field name="arch" type="xml">
-                <field name="display_name" position="before">
-                    <field name="code" />
-                </field>
                 <field name="email" position="after">
                     <field name="is_active" />
                 </field>

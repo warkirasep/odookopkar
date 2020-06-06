@@ -1,0 +1,69 @@
+<odoo>
+	<record id="res_config_settings_view_form" model="ir.ui.view">
+		<field name="name">res.config.settings.view.form.inherit.sale</field>
+		<field name="model">res.config.settings</field>
+		<field name="priority" eval="10"></field>
+		<field name="inherit_id" ref="base.res_config_settings_view_form"></field>
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]" postion="inside">
+				<div class="app_settings_block" data-string="Koperasi" string="Koperasi" data-key="koperasi">
+					<h2>Simpanan</h2>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<label for="max_simp_pokok" string="Maksimal Simpanan Pokok"/>
+							<field name="max_simp_pokok" />
+							<label for="cost_adm_member_out" string="Biaya Adm Keluar Anggota"/>
+							<field name="cost_adm_member_out" />
+						</div>
+						<div class="col-12 col-lg-6 o_setting_box">
+							<label for="max_simp_wajib" string="Maksimal Simpanan Wajib"/>
+							<field name="max_simp_wajib" />
+						</div>
+					</div>
+					<h2>Pinjaman Reguler</h2>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<label for="max_pinj_reguler" string="Maksimal Pinjaman Reguler"/>
+							<field name="max_pinj_reguler" />
+							<label for="pinj_reguler_pengurus" string="Potongan Pinjaman Reguler Pengurus"/>
+							<field name="pinj_reguler_pengurus" />
+						</div>
+						<div class="col-12 col-lg-6 o_setting_box">
+							<label for="pinj_reguler_anggota" string="Potongan Pinjaman Reguler Anggota"/>
+							<field name="pinj_reguler_anggota" />
+						</div>
+					</div>
+					<h2>Pinjaman Barang</h2>
+					<div class="row mt16 o_settings_container">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<label for="max_pinj_barang" string="Maksimal Pinjaman Barang"/>
+							<field name="max_pinj_barang" />
+							<label for="pinj_barang_pengurus" string="Potongan Pinjaman Barang Pengurus"/>
+							<field name="pinj_barang_pengurus" />
+						</div>
+						<div class="col-12 col-lg-6 o_setting_box">
+							<label for="pinj_barang_anggota" string="Potongan Pinjaman Barang Anggota"/>
+							<field name="pinj_barang_anggota" />
+						</div>
+					</div>
+					<h2>Pinajaman Bank</h2>
+				</div>
+			</xpath>
+		</field>
+	</record>
+	<record id="action_koperasi_config_settings" model="ir.actions.act_window">
+		<field name="name">Koperasi</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">res.config.settings</field>
+		<field name="view_id" ref="res_config_settings_view_form" />
+		<field name="view_mode">form</field>
+		<field name="target">inline</field>
+		<field name="context">{'module' : 'koperasi'}</field>
+	</record>
+	<menuitem id="koperasi_settings"
+        name="Settings"
+        parent="configuration"
+        sequence="1"
+        action="action_koperasi_config_settings"
+    />
+</odoo>

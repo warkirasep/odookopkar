@@ -13,5 +13,6 @@
         'views/department.xml',
         'views/account.xml',
         'views/jenis_simpanan.xml',
+        'views/settings.xml',
     ]
 }
