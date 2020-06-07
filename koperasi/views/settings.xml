@@ -16,8 +16,8 @@
 							<field name="cost_adm_member_out" />
 						</div>
 						<div class="col-12 col-lg-6 o_setting_box">
-							<label for="max_simp_wajib" string="Maksimal Simpanan Wajib"/>
-							<field name="max_simp_wajib" />
+							<label for="potongan_simp_wajib" string="Potongan Simpanan Wajib"/>
+							<field name="potongan_simp_wajib" />
 						</div>
 					</div>
 					<h2>Pinjaman Reguler</h2>
@@ -25,11 +25,11 @@
 						<div class="col-12 col-lg-6 o_setting_box">
 							<label for="max_pinj_reguler" string="Maksimal Pinjaman Reguler"/>
 							<field name="max_pinj_reguler" />
-							<label for="pinj_reguler_pengurus" string="Potongan Pinjaman Reguler Pengurus"/>
+							<label for="pinj_reguler_pengurus" string="Jasa Pinjaman Reguler Pengurus %"/>
 							<field name="pinj_reguler_pengurus" />
 						</div>
 						<div class="col-12 col-lg-6 o_setting_box">
-							<label for="pinj_reguler_anggota" string="Potongan Pinjaman Reguler Anggota"/>
+							<label for="pinj_reguler_anggota" string="Jasa Pinjaman Reguler Anggota %"/>
 							<field name="pinj_reguler_anggota" />
 						</div>
 					</div>
@@ -38,11 +38,11 @@
 						<div class="col-12 col-lg-6 o_setting_box">
 							<label for="max_pinj_barang" string="Maksimal Pinjaman Barang"/>
 							<field name="max_pinj_barang" />
-							<label for="pinj_barang_pengurus" string="Potongan Pinjaman Barang Pengurus"/>
+							<label for="pinj_barang_pengurus" string="Jasa Pinjaman Barang Pengurus %"/>
 							<field name="pinj_barang_pengurus" />
 						</div>
 						<div class="col-12 col-lg-6 o_setting_box">
-							<label for="pinj_barang_anggota" string="Potongan Pinjaman Barang Anggota"/>
+							<label for="pinj_barang_anggota" string="Jasa Pinjaman Barang Anggota %"/>
 							<field name="pinj_barang_anggota" />
 						</div>
 					</div>
