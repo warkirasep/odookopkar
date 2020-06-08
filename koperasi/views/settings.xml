@@ -18,6 +18,8 @@
 						<div class="col-12 col-lg-6 o_setting_box">
 							<label for="potongan_simp_wajib" string="Potongan Simpanan Wajib"/>
 							<field name="potongan_simp_wajib" />
+							<label for="min_simp_sukarela" string="Minimal Simpanan Sukarela"/>
+							<field name="min_simp_sukarela" />
 						</div>
 					</div>
 					<h2>Pinjaman Reguler</h2>

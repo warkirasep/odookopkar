@@ -7,3 +7,4 @@ from . import department
 from . import account
 from . import jenis_simpanan
 from . import settings
+from . import account_journal

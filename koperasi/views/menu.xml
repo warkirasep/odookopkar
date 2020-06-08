@@ -122,7 +122,7 @@
 
     <!-- Sub Menu Configuration Jenis Pinjaman -->
     <menuitem id="jenis_pinjaman"
-        name="Jenis Pinjaman"
+        name="Pinjaman Bank"
         parent="pengaturan_pinjaman"
         sequence="20"
         action="action_calon_anggota_list"

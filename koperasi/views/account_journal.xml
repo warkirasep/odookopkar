@@ -1,0 +1,19 @@
+<odoo>
+	<record id="action_koperasi_account_journal" model="ir.actions.act_window">
+        <field name="name">Bank Account</field>
+        <field name="res_model">account.journal</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click To Add Account Bank
+            </p>
+            <p>Klick tombol create untuk bikin Account Bank</p>
+        </field>
+    </record>
+	<menuitem id="koperasi_account_journal"
+        name="Bank Account"
+        parent="pengaturan_pinjaman"
+        sequence="1"
+        action="action_koperasi_account_journal"
+    />
+</odoo>

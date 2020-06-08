@@ -7,6 +7,7 @@ class Settings(models.TransientModel):
 	max_simp_pokok = fields.Char(string="Maksimal Simpanan Pokok")
 	potongan_simp_wajib = fields.Char(string="Maksimal Simpanan Wajib")
 	cost_adm_member_out = fields.Char(string="Biaya Administrasi Keluar Anggota")
+	min_simp_sukarela = fields.Char(string="Minimal Simpanan Sukarela")
 
 	#Pinjaman reguler
 	max_pinj_reguler = fields.Char(string="Maksimal Pinjaman Reguler")
@@ -28,6 +29,7 @@ class Settings(models.TransientModel):
 		self.env['ir.config_parameter'].set_param('koperasi.max_simp_pokok', self.max_simp_pokok)
 		self.env['ir.config_parameter'].set_param('koperasi.potongan_simp_wajib', self.potongan_simp_wajib)
 		self.env['ir.config_parameter'].set_param('koperasi.cost_adm_member_out', self.cost_adm_member_out)
+		self.env['ir.config_parameter'].set_param('koperasi.min_simp_sukarela', self.min_simp_sukarela)
 
 		#Pinjaman reguler
 		self.env['ir.config_parameter'].set_param('koperasi.max_pinj_reguler', self.max_pinj_reguler)
@@ -48,6 +50,7 @@ class Settings(models.TransientModel):
 		max_simp_pokok = ICPSudo.get_param('koperasi.max_simp_pokok')
 		potongan_simp_wajib = ICPSudo.get_param('koperasi.potongan_simp_wajib')
 		cost_adm_member_out = ICPSudo.get_param('koperasi.cost_adm_member_out')
+		min_simp_sukarela = ICPSudo.get_param('koperasi.min_simp_sukarela')
 
 		#Pinjaman reguler
 		max_pinj_reguler = ICPSudo.get_param('koperasi.max_pinj_reguler')
@@ -63,6 +66,7 @@ class Settings(models.TransientModel):
 			max_simp_pokok = max_simp_pokok,
 			potongan_simp_wajib = potongan_simp_wajib,
 			cost_adm_member_out = cost_adm_member_out,
+			min_simp_sukarela = min_simp_sukarela,
 			max_pinj_reguler = max_pinj_reguler,
 			pinj_reguler_pengurus = pinj_reguler_pengurus,
 			pinj_reguler_anggota = pinj_reguler_anggota,

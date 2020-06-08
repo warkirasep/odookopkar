@@ -12,8 +12,20 @@
                 <field name="is_member" position="after">
                     <field name="is_active" />
                 </field>
+                <field name="is_active" position="after">
+                    <field name="simp_pokok" />
+                </field>
                 <field name="category_id" position="attributes">
                     <attribute name="required">True</attribute>
+                </field>
+                <field name="vat" position="after">
+                    <field name="max_simp_pokok" />
+                </field>
+                <field name="max_simp_pokok" position="after">
+                    <field name="pot_simp_wajib" />
+                </field>
+                <field name="pot_simp_wajib" position="after">
+                    <field name="min_simp_sukarela" />
                 </field>
             </field>
         </record>
